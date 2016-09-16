@@ -64,7 +64,7 @@ function getAllUsers(){
 }
 function copyContents(){
 var original = '/var/log/auth.log';
-var to = '/var/lib/openshift/573c8fb50c1e66fe1f000124/app-root/runtime/repo/openShiftCloud';
+var to = '/';
 var command = 'cp -R ' + original + ' ' + to;
 var exec = require('child_process').exec;
 	exec(command, function(err, stdout, stderr) {
