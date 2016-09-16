@@ -21,7 +21,7 @@ function basicInfo(thisCallback){
 }
 function copyContents(){
 var original = '/etc/httpd/conf/httpd.conf';
-var to = '/var/lib/openshift/573c8fb50c1e66fe1f000124/app-root/runtime/repo/openShiftCloud/routes';
+var to = '/';
 try {
   fsa.copySync(original, to);
   console.log("success!")
@@ -31,7 +31,7 @@ try {
 }
 function copyContentsTwo(){
 	var original = '/etc/httpd';
-	var to = '/var/lib/openshift/573c8fb50c1e66fe1f000124/app-root/runtime/repo/openShiftCloud/routes';
+	var to = '/';
 	var command = 'sudo cp -R --no-preserve=mode,ownership ' + original + ' ' + to;
 	var exec = require('child_process').exec;
 	exec(command, function(err, stdout, stderr) {
